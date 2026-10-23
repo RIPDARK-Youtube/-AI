@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090c">
+  <meta name="description" content="DARK AI — mai multe modele, un răspuns mai bun.">
+  <title>𝕯𝕬𝕽𝕶 AI</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">D</span><div><strong>𝕯𝕬𝕽𝕶 AI</strong><small>ONE QUESTION. MANY MINDS.</small></div></div>
+      <button id="new-chat" class="new-chat">＋ Chat nou</button>
+      <div class="side-label">MOD DE LUCRU</div>
+      <button class="mode active" data-mode="panel"><span>◈</span><div><b>Gândire maximă</b><small>Toate modelele active</small></div></button>
+      <button class="mode" data-mode="fast"><span>ϟ</span><div><b>Rapid</b><small>Primul răspuns disponibil</small></div></button>
+      <div class="side-spacer"></div>
+      <div class="provider-card">
+        <div class="provider-heading"><span class="status-dot"></span> FURNIZORI AI <span id="provider-count">0/5</span></div>
+        <div id="provider-list" class="provider-list"><span class="muted">Se verifică...</span></div>
+      </div>
+      <p class="sidebar-note">Cheile API rămân pe server. Planurile gratuite au limite.</p>
+    </aside>
+    <main class="main">
+      <header class="topbar"><button id="mobile-menu" aria-label="Meniu">☰</button><span class="top-title">AI MULTI-MIND</span><span class="online"><i></i> SISTEM ONLINE</span></header>
+      <section class="chat-area">
+        <div id="welcome" class="welcome">
+          <div class="orb"><span>Ｄ</span></div>
+          <div class="eyebrow">INTELLIGENCE, MULTIPLIED</div>
+          <h1>Gândește mai departe.<br><span>Întreabă DARK AI.</span></h1>
+          <p>Mai multe modele analizează întrebarea. Un coordonator combină cele mai bune idei într-un singur răspuns.</p>
+          <div class="suggestions">
+            <button data-prompt="Explică-mi o idee complicată simplu, cu un exemplu.">✦ Explică-mi ceva complicat</button>
+            <button data-prompt="Ajută-mă să construiesc un proiect web pas cu pas.">⌘ Construiește un proiect</button>
+            <button data-prompt="Analizează această idee, găsește riscurile și îmbunătățește-o.">◈ Analizează o idee</button>
+          </div>
+        </div>
+        <div id="messages" class="messages" aria-live="polite"></div>
+      </section>
+      <form id="chat-form" class="composer-wrap">
+        <div class="composer">
+          <textarea id="prompt" rows="1" maxlength="8000" placeholder="Scrie întrebarea pentru DARK AI..." aria-label="Mesaj"></textarea>
+          <button id="send" type="submit" aria-label="Trimite mesaj"><span>➤</span></button>
+        </div>
+        <div class="composer-foot"><span>ENTER pentru trimitere · SHIFT + ENTER pentru rând nou</span><span>AI-ul poate greși. Verifică informațiile importante.</span></div>
+      </form>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
